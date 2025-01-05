@@ -1,3 +1,8 @@
-#RewriteEngine On
-#RewriteCond %{HTTPS} !=on
-#RewriteRule ^(.*)$ https://tmatic.org/$1 [L,R=301]
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS for tmatic.org
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^tmatic\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tmatic\.org$
+RewriteRule ^(.*)$ https://tmatic.org/$1 [L,R=301]
