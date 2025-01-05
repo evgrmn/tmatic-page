@@ -1,3 +1,3 @@
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://tmatic.org/$1 [R=301,L]
+RewriteRule ^(.*)$ https://tmatic.org/$1 [L,R=301]
