@@ -1,7 +1,0 @@
-# Enable Rewrite Engine
-#RewriteEngine On
-
-# Redirect all requests to HTTPS and non-www (NC means Case-Insensitive Flag, e.g., www, WWW)
-#RewriteCond %{HTTPS} off [NC,OR]
-#RewriteCond %{HTTP_HOST} ^www\.
-#RewriteRule ^(.*)$ https://tmatic.org/$1 [L,R=301]
